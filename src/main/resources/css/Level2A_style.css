@@ -1,0 +1,586 @@
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+ 
+.html {
+    background-color: #f7f5e8;
+}
+ 
+body {          
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f5e8;
+    margin: 0;
+    padding: 0;
+   
+}
+.header {
+    height: 60px;
+    background-color: #10a4b0;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 98vw;
+    z-index: 1000;
+    background-image: url('headerimg.png');
+    margin: flex;
+    font-size: 15px;
+}
+ 
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content:right;
+    text-align: center;
+}
+.website_name {
+    width: cover;
+    margin-bottom: 70px;
+   
+}
+.website_name h1 {
+    animation: slide-in 1.3s ease-out forwards;
+}
+ 
+ 
+ 
+.navbar {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px 20px;
+}
+ 
+.main_menu {
+    background-color: #6baadd;
+    display: flex;
+    list-style: none;
+   
+ 
+}
+ 
+.main_menu li {
+    position: relative;
+    padding: 2px 10px;
+   
+}
+ 
+.main_menu li a {
+    display: block;
+    text-decoration: none;
+    margin: 11px;
+}
+ 
+.icon {
+    width: 10px;
+    height: auto;
+}
+ 
+.main_menu ul.sub_menu1 {
+    width: auto;
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #6baadd;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    margin-top: -1.5px;
+}
+ 
+.main_menu li:hover ul.sub_menu1 {
+    display: block;
+}
+ 
+ 
+.main_menu ul.sub_menu {
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #6baadd;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    margin-top: -1.5px;
+}
+ 
+.main_menu li:hover ul.sub_menu {
+    display: block;
+}
+ 
+ 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background-color: #fffdf0;
+    box-shadow: 0px 8px 500px rgba(0, 0, 0, 0.2),
+                0px 4px 500px rgba(0, 0, 0, 0.1);
+   
+ 
+}
+.center_content {
+    flex-direction: column;
+    display: flex;
+    width: 310mm;
+    height: 94vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+ 
+.website_name {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px;  
+    margin-top: 70px;
+    backdrop-filter: blur(1.3px);
+    padding: 5px;
+}
+ 
+ 
+.filters form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+ 
+.filters div, .filters form select{
+    display: flex;
+    align-items: center;
+   
+}
+ 
+.filters form input[type="text"], .filters form select {
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+ 
+    border: 2px solid #000;
+}
+.filters form input[type="number"] {
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+ 
+    border: 2px solid #000;
+}
+ 
+.filters form .world_country select {
+    height: 55px;
+    margin-right: 5px;
+    border-radius: 0px;
+}
+ 
+.filters form .sortFunction {
+    margin-left: -15px;
+}
+ 
+.filters form .filter_icon {
+    background-color: white;
+}
+ 
+.filters button:hover {
+    background-color: gray;
+}
+.main-content {
+    padding: 100px;
+    background-color: white ;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+}
+ 
+.main-content .table-section {
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: cover;
+    overflow: auto;
+    max-height: 400px;
+}
+.country_table h2, .world_table h2 {
+    background-color: #d44b47;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+ 
+.country_table, .world_table {
+    margin-top: 30px;
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    display: block;
+    overflow-x: auto;
+}
+ 
+.world_table th, .world_table td, .country_table th, .country_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+ 
+.world_table th, .country_table th {
+    padding: 20px;
+    background-image: linear-gradient(#29bac7 0%, #ace2f3 74%);
+    background-image: url(headerimg.png);
+    color: #f2edea;
+}
+ 
+.temp_change, .pop_change{
+    width: 100px;
+}
+.sortFunction{
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+}
+ 
+.world_country select , .startYear, .startYear, .statisticView select , .sortFunction select {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    padding: 10px;
+            font-size: 1em;
+}
+ 
+.statisticView #statisticView {
+    margin-left: -10px;
+}
+ 
+.endYear {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    margin-right: 20px;
+}
+ 
+.statisticView select {
+    display: block;
+    font-size: 20px;
+    margin-left: -20px;
+ 
+}
+ 
+.filter_icon {
+    height: 50px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    border-style: groove;
+    cursor: pointer;
+   
+}
+.center-img{
+    position: relative;
+    display: flex;
+    margin-top: -18px;
+    margin-left: -18px;
+    width: 120%;  
+}
+.center-background{
+    flex-direction: column;
+    position: relative;
+    margin-top: -20px;
+    margin-left: -19.15px;
+    width: 1210px;
+    height: 400px;
+    background-image: url('level2limg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+/*footer*/
+ 
+.site_map_footer {
+    width: 100%;
+    height: 100px;
+    margin-top: -15px;
+    background-color: #fffdf0;
+}
+ 
+.memberInfo ul {
+    width: 100%;
+    height: 200px;
+    background-image: url('headerimg.png');
+    color: #fff;
+    display: flex;
+    justify-content: center; /*căn lề phải*/
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+ 
+}
+.memberInfo span p {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.memberInfo li{
+    margin-top: -10px;
+    position: relative;
+    right:300px;
+   
+}
+.site_map_footer_blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.titleName {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: -200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 250px;
+    bottom: 50px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+ 
+-- NEW AJUSTMENT
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+}
+ 
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+}  
+ 
+.header  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+ 
+.center_content {
+    flex-direction: column;
+    display: flex;
+    width: 310mm;
+    height: 257mm;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+ 
+}    
+ 
+.filters {
+    display: flex;
+    box-sizing: border-box;
+    padding: 12px;
+    color: white;
+    margin: auto;
+    margin-bottom: 100px;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+   
+ 
+}
+.filters select, .filters button {
+    padding: 15px;
+    font-size: 14px;
+    margin:auto;
+ 
+}
+.filters button {
+    margin:auto;
+    background-color: white;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+ 
+ 
+.main-content .table-section {
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100;
+ 
+}
+.table h2 {
+    background-color: #d44b47;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+ 
+}
+.table {
+    margin-top: 30px;
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+   
+   
+}
+.table th, .table td {
+ 
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    padding: 20px;
+    background-color: #217ab4ee;
+    background-image: url(headerimg.png);
+    color:  #f2edea;
+}
+.temp_change, .pop_change{
+    width: 100px;
+}
+.region, .start_year, .end_year, .start_year, .statisticView, .sortFunction{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+}
+.filter_icon {
+   border-radius: 6px;
+   justify-content: center;
+    align-items: center;
+    border-style: groove;
+    border: 20px solid black;
+}
+.world_country select , .startYear input, .startYear input, .statisticView select , .sortFunction select {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    padding: 10px;
+            font-size: 1em;
+    border: 2px solid #000;
+}
+ 
+.statisticView #statisticView {
+    margin-left: -10px;
+}
+ 
+.endYear input {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    margin-right: 20px;
+    border: 2px solid #000;
+}
+.data-table {
+    overflow-x: auto;
+    max-width: 100%;
+}
+ 
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+ 
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+ 
+.table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+.table th {
+    background-color: #6baadd;
+    text-align: center;
+    font-size: 20px;
+}
+.temp_change, .pop_change{
+    width: 100px;
+}
+.region, .start_year, .end_year, .start_year, .statisticView, .sortFunction{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+}
+.filters form .filter_icon {
+   border-radius: 6px;
+   justify-content: center;
+   align-items: center;
+   border-style: groove;
+   border: 2px solid black;
+}

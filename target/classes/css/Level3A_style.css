@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Body Styling */
+body {
+    width: cover;
+    height: 1000px;
+    font-family: Arial, sans-serif;
+}
+@media (max-width: 1200px) {
+    .about_us, .information {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.logo {
+    height: 50px; /* Điều chỉnh chiều cao của logo */
+    margin-right: 20px; /* Khoảng cách giữa logo và phần còn lại của header */
+    margin-left: 30px;
+}
+.website_name a{
+    width: 100%;
+    height: 20px;
+    text-decoration: none;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /*căn lề phải*/
+    align-items: center; /*căn giữa theo chiều ngang*/
+    padding: 10px 20px;
+}
+ 
+header {
+    background-color: rgb(170, 201, 201);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(#29bac7 0%, #ace2f3 74%);
+    position: fixed;
+    top: 0; /* Đặt header ở đầu trang */
+    width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    background-image: url('headerimage.png');
+}
+.main_menu {
+    background-color: #217ab4ee;
+    display: flex;
+    list-style: none; /*xóa các chấm của thẻ li*/
+}
+ 
+.main_menu li {
+    position: relative; /*lấy thẻ này làm chuẩn để hiện thị sub_menu*/
+    padding: 2px 10px;
+ 
+}
+ 
+.main_menu li a {
+    display: block;
+    text-decoration: none;
+    margin: 11px;
+   
+}
+ 
+.icon {
+    width: 10px;
+    height: auto; 
+}
+ 
+.main_menu ul.sub_menu {
+    width: 250px;
+    position: absolute;
+    display: none; 
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #217ab4ee; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    z-index: 10
+ 
+}
+ 
+.main_menu li:hover ul.sub_menu {
+    display: block; 
+}
+ 
+.image {
+    background-image: url("mountains-4292912.jpg");
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 85px;
+    transition: transform 0.3s ease;
+}
+
+.image h1 {  
+    text-align: center;
+    padding-top: 90px;
+    color: white;
+    font-size: 56px;
+    font-weight: bold;
+    animation: slide-in 1.3s ease-out forwards;
+}
+
+
+.container {
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    gap: 2%;
+    padding: 2%;
+}
+
+/* table 1 */
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-item input, .form-item select {
+    height: 50px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tool1-content-container .tool1-filter,
+.tool2-content-container .tool2-filter,
+.tool3-content-container .tool3-filter {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tool1-content-container, .tool2-content-container, .tool3-content-container {
+    background-color: #529fd1;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid rgb(3, 200, 214);
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tool2-checkbox-container {
+    display: flex;
+    height: 200px;
+    overflow-y: auto;
+}
+.tool2-checkbox-container .folder .folder-content {
+    width: cover;
+}
+
+.tool2-checkbox-container .folder .folder-content .folder .folder-content .checkbox-item input {
+    width: 30px;
+    height: 30px;
+}
+.tool2-checkbox-container .folder .folder-header {
+    width: 220px;
+    background-color: white;
+}
+
+.submit {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+.submit1, .submit2 {
+    width: 100%;
+    height: 30px;
+}
+
+
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table.spreadsheet {
+    border-collapse: collapse; /* Gộp các đường viền lại với nhau */
+    width: 100%; /* Đặt chiều rộng của bảng */
+}
+
+table.spreadsheet th, table.spreadsheet td {
+    border: 1px solid black; /* Đặt đường viền cho các ô */
+    padding: 8px; /* Thêm khoảng cách bên trong các ô */
+    text-align: left; /* Căn chỉnh văn bản bên trái */
+}
+
+table.spreadsheet th {
+    background-color: #f2f2f2; /* Đặt màu nền cho tiêu đề */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 2%;
+        gap: 10px;
+    }
+}
+
+#results {
+    margin-top: 20px;
+}
+
+
+.containerOutput1, .containerOutput2, .containerOutput3, .tool1-filter, .tool2-filter, .tool3-filter {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.output1-info{
+    text-align: center;
+}
+
+.tool1-filter, .tool1-content-container h2, .containerOutput1 {
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 20px;
+}
+
+.tool2-filter, .tool2-content-container h2 {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 20px;
+
+}
+
+.tool3-filter, .tool3-content-container h2 {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 20px;
+    
+}
+
+.tool1-content-container h2, .tool2-content-container h2, .tool3-content-container h2 {
+    margin-bottom: 20px;
+}
+
+.tool1-filter {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.new-box {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.new-box-output1 {
+    width: 100%;
+    padding: 10px;
+
+}
+.tool1-content-container .containerOutput1 {
+    width: 100%;
+    margin-left: 0px;
+    
+}
+
+/*footer*/
+
+.site_map_footer {
+    width: 100%;
+    height: 100px;
+    
+}
+.memberInfo ul {
+    width: 100%;
+    height: 200px;
+    background-image: url('headerimg.png');
+    color: #fff;
+    display: flex;
+    justify-content: center; /*căn lề phải*/
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+
+}
+.memberInfo span p {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.memberInfo li{
+    position: relative;
+    right:300px;
+}
+.site_map_footer_blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.titleName {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: -200px; 
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 250px;
+    bottom: 50px;
+    margin-left: 200px;
+}
+ 
+ 
+ 
+ 
+ 
+/*  -------------------------------------------------- HEADER CSS ADDED FROM WEBSITE----------------------------------- */
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: cover; /* This property is incorrect, consider using 'width: 100%;' */
+    height: 1000px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f5e8;
+}
+ 
+@media (max-width: 1200px) {
+    .about_us, .information {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/*header*/
+.logo {
+    height: 50px; /* Adjust the height of the logo */
+    margin-right: 20px; /* Space between the logo and the rest of the header */
+}
+ 
+.website_name a {
+    width: 100%;
+    height: 20px;
+    text-decoration: none;
+}
+ 
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Align to the right */
+    align-items: center; /* Center align horizontally */
+    padding: 10px 20px;
+}
+ 
+header {
+    background-color: rgb(87, 177, 233);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-image: url('headerimg.png');
+    position: fixed;
+    top: 0; /* Place header at the top of the page */
+    width: 100%; /* Ensure header takes full width */
+    z-index: 1000; /* Ensure header is above other elements */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ 
+.main_menu {
+    background-color: #6baadd;
+    display: flex;
+    list-style: none; /* Remove list item bullets */
+   
+ 
+}
+ 
+.main_menu li {
+    position: relative; /* Set this element as the reference for sub_menu */
+    padding: 2px 10px;
+   
+}
+ 
+.main_menu li a {
+    display: block;
+    text-decoration: none;
+    margin: 11px;
+}
+ 
+.icon {
+    width: 10px; /* Set the width of the image */
+    height: auto; /* Height adjusts automatically to maintain aspect ratio */
+}
+ 
+.main_menu ul.sub_menu1 {
+    width: auto;
+    position: absolute;
+    display: none; /* Hide sub_menu initially */
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #6baadd; /* Background color for sub_menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add shadow to sub_menu */
+    z-index: 10; /* Ensure sub_menu is above other elements */
+}
+ 
+.main_menu li:hover ul.sub_menu1 {
+    display: block; /* Show sub_menu on hover */
+}
+ 
+ 
+.main_menu ul.sub_menu {
+    position: absolute;
+    display: none; /* Hide sub_menu initially */
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #6baadd; /* Background color for sub_menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add shadow to sub_menu */
+    z-index: 10; /* Ensure sub_menu is above other elements */
+}
+ 
+.main_menu li:hover ul.sub_menu {
+    display: block; /* Show sub_menu on hover */
+}
+ 
+.lang {
+    height: 45px;
+    display: flex;
+    position: relative;
+    right: 10px;
+    margin-bottom: 20px;
+ 
+}
+ 
+.tool1-filter, .tool2-filter, .tool3-filter{
+    width: 80%;
+    background-color: #f5f5f5;
+}
+.regionTool1 {
+   
+    width: 50%;
+}
+.containerOutput1{
+    width: 80%;
+    background-color: #3391cfee;
+}
+.containerOutput2, .containerOutput3{
+   
+    background-color: #3391cfee;
+}
+.tool2-checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 20px;
+  }
+ 
+.title-checkbox{
+    border: #f2f2f2;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 40px;
+    border: #333;
+}
+.checkbox {
+    font-size: 30px;
+}
+.folder-content{
+    width: 300px;
+    background-color: #f2f2f2;
+}
+.containerOutput1, .containerOutput2, .containerOutput3, .tool1-filter, .tool2-filter, .tool3-filter {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+.tool1-content-container h2, .tool2-content-container h2, .tool3-content-container h2 {
+    color: #212427;
+}
+
+.how{
+    text-align: center ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,279 @@
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f5e8;
+    margin: 0;
+    padding: 0;
+}
+main {
+    flex: 1; /* Phần nội dung chính sẽ chiếm không gian còn lại */
+}
+
+header {
+    display: flex;
+    height: 60px;
+    background-color: #10a4b0;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-image: url('headerimg.png');
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main_menu {
+    background-color: #6baadd;
+    display: flex;
+    list-style: none;
+}
+
+.main_menu li {
+    position: relative;
+    padding: 2px 10px;
+}
+
+.main_menu li a {
+    display: block;
+    text-decoration: none;
+    margin: 11px;
+}
+
+.icon {
+    width: 10px;
+    height: auto;
+}
+
+.main_menu ul.sub_menu1,
+.main_menu ul.sub_menu {
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 8px 15px;
+    background-color: #6baadd;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    margin-top: -1.5px;
+}
+
+.main_menu li:hover ul.sub_menu1,
+.main_menu li:hover ul.sub_menu {
+    display: block;
+}
+
+.lang {
+    height: 45px;
+    display: flex;
+    position: relative;
+    right: 10px;
+    margin-bottom: 20px;
+
+}
+
+.image {
+    background-image: url("mountains-4292912.jpg");
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 85px;
+    transition: transform 0.3s ease;
+}
+
+.image h1 {  
+    text-align: center;
+    padding-top: 90px;
+    color: white;
+    font-size: 56px;
+    font-weight: bold;
+    animation: slide-in 1.3s ease-out forwards;
+}
+
+
+.container {
+    display: flex;
+    margin: 5%;
+    background-color: #74b5eb;
+    justify-content: center;
+    gap: 2%;
+    padding: 2%;
+}
+
+/*table*/
+.content form {
+    margin-top: 20px;
+    background-color: #4696cf;
+    color: #212427;
+}
+
+
+.main_filter {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-left: 40%;
+
+}
+
+.main_filter1 label, .main_filter1 select, .main_filter1 button {
+    height: 30px;
+}
+
+.main_filter label, .main_filter select, .main_filter button {
+    height: 40px;
+    border-radius: 3px;
+    
+}
+
+.main_filter1 {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    justify-content: center;
+}
+.main_filter1 input {
+    width: 200px;
+    border-radius: 3px;
+    
+}
+.main_filter1 select {
+    width: 200px;
+    border-radius: 3px;
+}
+
+
+
+
+.results-section {
+    width: 90%;
+    padding: 40px;
+    margin: 30px;
+    border: 2px solid #ccc; /* Tạo viền ngoài */
+    border-radius: 10px;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+
+tr:hover {
+    background-color: #10a4b0;
+}
+
+table tbody {
+    background-color: white;
+
+}
+
+/*footer*/
+
+.site_map_footer {
+    width: 100%;
+    height: 100px;
+    
+}
+.memberInfo ul {
+    width: 100%;
+    height: 200px;
+    background-image: url('headerimg.png');
+    color: #fff;
+    display: flex;
+    justify-content: center; /*căn lề phải*/
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+
+}
+.memberInfo span p {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.memberInfo li{
+    position: relative;
+    right:300px;
+}
+.site_map_footer_blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.titleName {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: -200px; 
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 250px;
+    bottom: 50px;
+    margin-left: 200px;
+}
+
+.intro-message{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    display: block;
+}
+.main_filter{
+    background-image: url('headerimage.png');
+}
